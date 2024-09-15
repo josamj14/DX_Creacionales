@@ -51,7 +51,7 @@ interface AbstractFactory {
 }
 
 class FabricaDell implements AbstractFactory {
-  public conectarCamaraReunion(id : string, resolucion : number):   {
+  public conectarCamaraReunion(id : string, resolucion : number):CamaraWeb   {
     return new CamaraDell(id, resolucion);
   }
 
@@ -61,7 +61,7 @@ class FabricaDell implements AbstractFactory {
 }
 
 class FabricaHP implements AbstractFactory {
-  public conectarCamaraReunion(id : string, resolucion : number): CamaraWeb{
+  public conectarCamaraReunion(id : string, resolucion : number):CamaraWeb {
     return new CamaraHP(id, resolucion);
   }
 
