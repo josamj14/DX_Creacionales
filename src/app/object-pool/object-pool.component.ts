@@ -11,6 +11,29 @@ export class ObjectPoolComponent {
 
 }
 
+class OperadoresPool{
+  static Pool: OperadoresPool;
+  opDisponibles: Operador[];
+  opOcupados: Operador[];
+
+  constructor(){
+    this.opDisponibles = [];
+    this.opOcupados = [];
+  }
+
+  inicializarPiscina(){
+
+  }
+
+  asignarOperador(): Operador {
+    return new Operador("0", "h");
+  }
+
+  liberarOperador(op : Operador) {
+  }
+
+}
+
 class Cliente{
   id : string;
   nombre : string;
@@ -18,6 +41,23 @@ class Cliente{
   constructor(id:string, nombre:string){
     this.id = id;
     this.nombre = nombre;
+  }
+
+  enviarMensaje(){
+
+  }
+
+  recibirMensaje(){
+
+  }
+
+  conectar(){
+    var michat : Chat;
+    michat = new Chat("0", this);
+  }
+
+  desconectar(){
+
   }
 }
 
@@ -28,6 +68,14 @@ class Operador{
   constructor(id: string, nombre: string){
     this.id = id;
     this.nombre = nombre;
+  }
+
+  enviarMensaje(){
+
+  }
+
+  recibirMensaje(){
+
   }
 }
 
@@ -41,6 +89,18 @@ class Chat{
     this.id = id;
     this.cliente = cliente;
     this.mensajes = [];
+  }
+
+  iniciarChat(){
+
+  }
+
+  terminarChat(){
+
+  }
+
+  agregarMensaje(){
+
   }
 }
 
