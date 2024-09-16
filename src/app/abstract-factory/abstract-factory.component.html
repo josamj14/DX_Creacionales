@@ -1,1 +1,33 @@
-<p>abstract-factory works!</p>
+<div class="d-flex justify-content-center align-items-center">
+  
+    <div class="mb-3">
+        <h1 class="text-center">Join</h1>
+        <label for="basic-url" class="form-label">ID</label>
+        <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="clienteId" id="basic-id" aria-describedby="basic-addon3 basic-addon4">
+        </div>
+        <label for="basic-url" class="form-label">Nombre</label>
+        <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="clienteNombre" id="basic-name" aria-describedby="basic-addon3 basic-addon4">
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-primary" (click)="inicializarCliente()">Ingresar</button>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <button class="btn btn-primary" (click)="iniciarFabricaDell()">Dell</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" (click)="iniciarFabricaHP()">HP</button>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+                <button class="btn btn-primary" (click)="conectarCamara()">Camara Web</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" (click)="conectarMicrofono()">Microfono</button>
+            </div>
+          </div>
+      </div>   
+</div>
