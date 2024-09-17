@@ -27,16 +27,16 @@
   .buttons-container {
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 60%;
   }
-
+  
   
   .pattern-button {
-    width: 200px;
+    width: 300px;
     height: 150px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 25px;
     cursor: pointer;
     display: flex;
     justify-content: center;

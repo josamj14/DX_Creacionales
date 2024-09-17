@@ -1,31 +1,31 @@
 <body>
     <div class="container">
-        <h1>Clonar  Documentos</h1>
+        <h1>Clonar Documentos</h1>
         <div class="document-container">
-            <button class="doc-button">
+            <button class="doc-button" (click)="selectDocument('Informe')" [ngClass]="{'selected': selectedDocument === 'Informe'}">
                 <div class="document-shape"></div>
                 Informes
             </button>
-            <button class="doc-button">
+            <button class="doc-button" (click)="selectDocument('Contrato')" [ngClass]="{'selected': selectedDocument === 'Contrato'}">
                 <div class="document-shape"></div>
                 Contratos
             </button>
-            <button class="doc-button">
+            <button class="doc-button" (click)="selectDocument('Plan')" [ngClass]="{'selected': selectedDocument === 'Plan'}">
                 <div class="document-shape"></div>
                 Planes
             </button>
         </div>
-        
+
         <div class="form-container">
             <div class="form-group">
                 <label for="department">Departamento:</label>
-                <input type="text" id="department" placeholder="Ingrese el departamento">
+                <input type="text" id="department" [(ngModel)]="department" placeholder="Ingrese el departamento">
             </div>
             <div class="form-group">
                 <label for="details">Detalle:</label>
-                <input type="text" id="details" placeholder="Ingrese detalles">
+                <input type="text" id="details" [(ngModel)]="details" placeholder="Ingrese detalles">
             </div>
-            <button class="clone-button">Clonar Documento</button>
+            <button class="clone-button" (click)="cloneDocument()">Clonar Documento</button>
         </div>
     </div>
 </body>
