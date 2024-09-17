@@ -1,0 +1,94 @@
+.join-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #f7f5f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .join-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .input-group {
+    width: 100%;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .btn-primary {
+    background-color: #6aa9d4;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #599bbd;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  .button-row .col {
+    width: 48%;
+  }
+  
+  .button-row .btn-primary {
+    width: 100%;
+    background-color: #ec6b70;
+  }
+  
+  .button-row .btn-primary:hover {
+    background-color: #da5b60;
+  }
+  
+  .button-row .col:last-child .btn-primary {
+    background-color: #6d1b65;
+  }
+  
+  .button-row .col:last-child .btn-primary:hover {
+    background-color: #5c1454;
+  }
+  
