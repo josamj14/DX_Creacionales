@@ -13,10 +13,14 @@ export class ObjectPoolComponent {
   countClientes = 1;
   chatList : Chat[] = [];
   piscina : boolean = false;
+  operadoresOcupados : Operador [] = OperadoresPool.opOcupados;
+  operadoresDescupados : Operador [] = OperadoresPool.opDisponibles;
 
   inicializarPiscina(){
     OperadoresPool.inicializarPiscina();
     this.piscina = true;
+    this.operadoresOcupados = OperadoresPool.opOcupados;
+    this.operadoresDescupados = OperadoresPool.opDisponibles;
   }
 
   crearChat(){
@@ -59,7 +63,7 @@ class OperadoresPool{
   static inicializarPiscina() {
     for (let index = 0; index < 15; index++) {
       var opCreado : Operador =new Operador(`${index+1}`,"Operador " + (index+1));
-      OperadoresPool.opDisponibles.push(opCreado);
+      this.opDisponibles.push(opCreado);
     }
     console.log("Piscina inicializada!");
   }
@@ -67,7 +71,7 @@ class OperadoresPool{
   static asignarOperador(): Operador | undefined {
     var opAsignar = this.opDisponibles.pop();
     if (opAsignar!== undefined) {
-      OperadoresPool.opOcupados.push(opAsignar);
+      this.opOcupados.push(opAsignar);
     }
     console.log("Se asignará al "+ opAsignar?.nombre);
     return opAsignar;
@@ -75,7 +79,7 @@ class OperadoresPool{
 
   static liberarOperador(op : Operador) {
     this.opDisponibles.push(op);
-    OperadoresPool.opOcupados = OperadoresPool.opOcupados.filter(Operador => Operador !== op); 
+    this.opOcupados = this.opOcupados.filter(ope => ope.id !== op.id); 
     console.log("Se liberó al " + op.nombre);
   }
 }
