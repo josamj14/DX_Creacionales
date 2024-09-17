@@ -49,8 +49,6 @@ export class ObjectPoolComponent {
   }
 }
 
-<<<<<<< Updated upstream
-=======
 class OperadoresPool{
   static opDisponibles: Operador[]  = [];
   static opOcupados: Operador[]  = [];
@@ -82,7 +80,6 @@ class OperadoresPool{
   }
 }
 
->>>>>>> Stashed changes
 class Cliente{
   id : string;
   nombre : string;
@@ -91,14 +88,11 @@ class Cliente{
     this.id = id;
     this.nombre = nombre;
   }
-<<<<<<< Updated upstream
-=======
 
   enviarMensaje(mensaje : string, chat: Chat){
     chat.agregarMensaje(mensaje);
   }
 
->>>>>>> Stashed changes
 }
 
 class Operador{
@@ -109,14 +103,11 @@ class Operador{
     this.id = id;
     this.nombre = nombre;
   }
-<<<<<<< Updated upstream
-=======
 
   enviarMensaje(mensaje : string, chat:Chat){
     chat.agregarMensaje(mensaje);
   }
 
->>>>>>> Stashed changes
 }
 
 class Chat{
@@ -132,8 +123,6 @@ class Chat{
     this.mensajes = [];
     console.log("Chat was created with " + cliente.nombre);
   }
-<<<<<<< Updated upstream
-=======
 
   iniciarChat(){
     var op : Operador | undefined = OperadoresPool.asignarOperador();
@@ -154,6 +143,5 @@ class Chat{
     this.mensajes.push(mensaje)
   }
 
->>>>>>> Stashed changes
 }
 
