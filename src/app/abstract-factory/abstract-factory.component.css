@@ -18,6 +18,13 @@
     color: #333;
     font-family: 'Lato', sans-serif;
   }
+
+  .join-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+  }
   
   .form-group {
     width: 100%;
@@ -28,6 +35,13 @@
     font-size: 1.2rem;
     color: #333;
     font-family: 'Lato', sans-serif;
+  }
+
+  .centered {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
   }
   
   .input-group {
@@ -91,4 +105,13 @@
   .button-row .col:last-child .btn-primary:hover {
     background-color: #5c1454;
   }
+
+  .colored-label {
+    background-color: #ffffff; 
+    padding: 5px;              
+    border-radius: 4px;     
+    width: 100%; 
+    box-sizing: border-box;
+    display: block;     
+}
   
